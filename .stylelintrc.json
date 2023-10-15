@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.{ts,tsx}"
+      ],
+      "customSyntax": "@stylelint/postcss-css-in-js"
+    }
+  ]
+}
