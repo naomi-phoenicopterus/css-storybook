@@ -5,7 +5,7 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
   fontBase: '"Open Sans", sans-serif',
-  brandImage: 'public/logo.png',
+  brandImage: './logo.png',
   brandTarget: '_self',
 
   // color
