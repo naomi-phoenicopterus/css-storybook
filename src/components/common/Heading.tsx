@@ -10,6 +10,6 @@ export const Heading = ({ title }: Props) => {
 
 const StyleH1 = styled.h1`
   color: #383330;
+  font-size: 40px;
   font-weight: bold;
-  font-size: 32px;
-`
+`;

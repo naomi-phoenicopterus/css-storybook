@@ -1,4 +1,3 @@
-import React from "react";
 import { Heading } from "./common/Heading";
 import { Box } from "./common/Box";
 import { Stack } from "./common/Stack";
@@ -11,59 +10,57 @@ const links: Link[] = [
     url: "https://developer.mozilla.org/ja/docs/Web/CSS/CSS_grid_layout/Subgrid",
   },
   {
-    name: "subgrid",
-    url: "https://developer.mozilla.org/ja/docs/Web/CSS/CSS_grid_layout/Subgrid",
+    name: "grid",
+    url: "https://developer.mozilla.org/ja/docs/Web/CSS/grid",
   },
   {
-    name: "subgrid",
-    url: "https://developer.mozilla.org/ja/docs/Web/CSS/CSS_grid_layout/Subgrid",
+    name: "grid layout",
+    url: "https://developer.mozilla.org/ja/docs/Web/CSS/CSS_grid_layout",
   },
 ];
 
 export const Subgrid = () => {
   return (
-    <>
-      <Stack gap={4}>
-        <Heading title="Subgrid" />
-        <Link links={links} />
+    <Stack gap={4}>
+      <Heading title="Subgrid" />
+      <Link links={links} />
 
-        <Box>
-          <CardContainer>
-            <Card>
-              <CardTitle>カードタイトル</CardTitle>
-              <CardImage src="https://placehold.co/600x400" />
-              <CardText>カードテキストのサンプルです。</CardText>
-              <CardLabel>ラベル</CardLabel>
-            </Card>
+      <Box>
+        <CardContainer>
+          <Card>
+            <CardTitle>カードタイトル</CardTitle>
+            <CardImage src="https://placehold.co/600x400" />
+            <CardText>カードテキストのサンプルです。</CardText>
+            <CardLabel>ラベル</CardLabel>
+          </Card>
 
-            <Card>
-              <CardTitle>カードタイトル</CardTitle>
-              <CardImage src="https://placehold.co/600x400" />
-              <CardText>カードテキストのサンプルです。</CardText>
-              <CardLabel>ラベル</CardLabel>
-            </Card>
+          <Card>
+            <CardTitle>カードタイトル</CardTitle>
+            <CardImage src="https://placehold.co/600x400" />
+            <CardText>カードテキストのサンプルです。</CardText>
+            <CardLabel>ラベル</CardLabel>
+          </Card>
 
-            <Card>
-              <CardTitle>カードタイトル</CardTitle>
-              <CardImage src="https://placehold.co/600x400" />
-              <CardText>
-                カードテキストのサンプルです。カードテキストのサンプルです。カードテキストのサンプルです。カードテキストのサンプルです。
-              </CardText>
-              <CardLabel>ラベル</CardLabel>
-            </Card>
+          <Card>
+            <CardTitle>カードタイトル</CardTitle>
+            <CardImage src="https://placehold.co/600x400" />
+            <CardText>
+              カードテキストのサンプルです。カードテキストのサンプルです。カードテキストのサンプルです。カードテキストのサンプルです。
+            </CardText>
+            <CardLabel>ラベル</CardLabel>
+          </Card>
 
-            <Card>
-              <CardTitle>カードタイトル</CardTitle>
-              <CardImage src="https://placehold.co/600x400" />
-              <CardText>カードテキストのサンプルです。</CardText>
-              <CardLabel>
-                <span>ラベル</span>
-              </CardLabel>
-            </Card>
-          </CardContainer>
-        </Box>
-      </Stack>
-    </>
+          <Card>
+            <CardTitle>カードタイトル</CardTitle>
+            <CardImage src="https://placehold.co/600x400" />
+            <CardText>カードテキストのサンプルです。</CardText>
+            <CardLabel>
+              <span>ラベル</span>
+            </CardLabel>
+          </Card>
+        </CardContainer>
+      </Box>
+    </Stack>
   );
 };
 
@@ -81,15 +78,18 @@ const Card = styled.div`
   border-radius: 4px;
   row-gap: 16px;
 `;
-const CardTitle = styled.p``;
+const CardTitle = styled.p`
+  font-size: 20px;
+  font-weight: bold;
+`;
 const CardImage = styled.img`
   max-width: 100%;
   border-radius: 4px;
 `;
-const CardText = styled.p``;
+const CardText = styled.p`
+  line-height: 1.5;
+`;
 const CardLabel = styled.div`
   display: inline-flex;
   padding: 4px 6px;
-  background-color: #666;
-  color: #fff;
 `;
