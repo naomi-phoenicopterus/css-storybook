@@ -12,5 +12,5 @@ export default create({
   colorSecondary: '#c6562d',
 
   // UI サイドバー
-  appBg: '#f2f0ef',
+  appBg: '#f5f4f2',
 });
