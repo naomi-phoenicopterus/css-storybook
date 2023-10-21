@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 import { Reset } from "styled-reset";
 
 import { GlobalStyle } from "../../style/globalStyle";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "../../style/theme";
 
 // type
 type Props = {
@@ -14,11 +15,13 @@ export const GlobalTheme = ({ children }: Props) => {
     <>
       <Reset />
       <GlobalStyle />
-      <StyledSection>{children}</StyledSection>
+      <ThemeProvider theme={theme}>
+        <StyledSection>{children}</StyledSection>
+      </ThemeProvider>
     </>
   );
 };
 
 const StyledSection = styled.section`
   padding: 24px;
-`
+`;

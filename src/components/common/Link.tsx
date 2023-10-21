@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type Props = {
   name?: string;
   url?: string;
-  links: Link[]
+  links: Link[];
 };
 
 export type Link = {
@@ -18,7 +18,11 @@ export const Link = ({ links }: Props) => {
       MDN：
       <StyledUl>
         {links.map((item) => (
-          <li><StyledA href={item.url} target="_blank">{item.name}</StyledA></li>
+          <li>
+            <StyledA href={item.url} target="_blank">
+              {item.name}
+            </StyledA>
+          </li>
         ))}
       </StyledUl>
     </StyledP>
@@ -28,24 +32,28 @@ export const Link = ({ links }: Props) => {
 const StyledUl = styled.ul`
   display: flex;
   align-items: center;
-`
+`;
 const StyledP = styled.p`
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #a59d98;
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    color: ${theme.colors.black.sub};
+    font-size: 14px;
+    font-weight: bold;
+  `}
 `;
 
 const StyledA = styled.a`
-  text-decoration: none;
-  color: #c6562d;
-  background-color: transparent;
-  padding: 4px 8px 6px;
-  border-radius: 2px;
-  transition: 0.2s;
+  ${({ theme }) => css`
+    padding: 4px 8px 6px;
+    transition: ${theme.transition};
+    border-radius: 2px;
+    background-color: transparent;
+    color: ${theme.colors.orange.main};
+    text-decoration: none;
 
-  &:hover {
-    background-color: #f1ecea;
-  }
+    &:hover {
+      background-color: ${theme.colors.orange.sub};
+    }
+  `}
 `;

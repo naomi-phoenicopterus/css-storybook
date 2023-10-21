@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type Props = {
   children: ReactNode;
@@ -10,7 +10,9 @@ export const Box = ({ children }: Props) => {
 };
 
 const StyledDiv = styled.div`
-  background-color: #fff;
-  padding: 24px;
-  border-radius: 8px;
-`
+  ${({ theme }) => css`
+    padding: 24px;
+    border-radius: 8px;
+    background-color: ${theme.colors.white};
+  `}
+`;

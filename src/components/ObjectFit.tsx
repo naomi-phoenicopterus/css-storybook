@@ -111,11 +111,6 @@ const StyledRect = styled(StyledDiv)`
 const StyledP = styled.p`
   color: #a59d98;
   font-weight: bold;
-
-  span {
-    color: #383330;
-    font-size: 22px;
-  }
 `;
 
 // リスト
