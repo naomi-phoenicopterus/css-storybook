@@ -23,5 +23,5 @@ export const GlobalTheme = ({ children }: Props) => {
 };
 
 const StyledSection = styled.section`
-  padding: 24px;
+  padding: 32px 40px;
 `;
